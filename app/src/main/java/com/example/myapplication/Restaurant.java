@@ -4,12 +4,12 @@ public class Restaurant {
 
     private String name;
     private int imageResourceId;
-    private String location;
+    private String type;
     private float rating;
 
-    public Restaurant(String name,String location, float rating,int imageResourceId) {
+    public Restaurant(String name,String type, float rating,int imageResourceId) {
         this.name = name;
-        this.location = location;
+        this.type = type;
         this.rating = rating;
         this.imageResourceId=imageResourceId;
     }
@@ -25,8 +25,8 @@ public class Restaurant {
         return name;
     }
 
-    public String getLocation() {
-        return location;
+    public String getType() {
+        return type;
     }
 
     public float getRating() {
