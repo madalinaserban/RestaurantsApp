@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.databinding.ActivityRestaurantBinding;
 
@@ -39,21 +42,13 @@ public class RestaurantActivity extends AppCompatActivity {
 
 
 
+
         binding.showMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (binding.restaurantPhone.getVisibility() == View.GONE) {
-                    binding.restaurantPhone.setVisibility(View.VISIBLE);
-                    binding.restaurantRating.setVisibility(View.VISIBLE);
-                    binding.webpageLink.setVisibility(View.VISIBLE);
-                    binding.showMoreButton.setText(" Show less ");
-                } else {
-                    binding.restaurantPhone.setVisibility(View.GONE);
-                    binding.restaurantRating.setVisibility(View.GONE);
-                    binding.webpageLink.setVisibility(View.GONE);
-                    binding.showMoreButton.setText(" Show more ");
-                }
+                Intent intent = new Intent(RestaurantActivity.this, RestaurantDetailsActivity.class);
+                intent.putExtra("description", description);
+                startActivity(intent);
             }
         });
 
