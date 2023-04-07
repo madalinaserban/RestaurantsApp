@@ -6,51 +6,71 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RadioGroup
-        android:id="@+id/filter_radio_group"
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/filter_all"
+        <RadioGroup
+            android:id="@+id/filter_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/round_button"
-            android:checked="true"
-            android:text="All" />
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/filter_italian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/round_button"
-            android:text="Italian"
-            app:backgroundTint="@color/btn_italian" />
+            <RadioButton
+                android:id="@+id/filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/round_button"
+                android:checked="true"
+                android:text="@string/all" />
 
-        <RadioButton
-            android:id="@+id/filter_chinese"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/round_button"
-            android:text="Chinese"
-            app:backgroundTint="@color/btn_chinese" />
+            <RadioButton
+                android:id="@+id/filter_italian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/round_button"
+                android:text="@string/italian"
+                app:backgroundTint="@color/btn_italian" />
 
-        <RadioButton
-            android:id="@+id/filter_fast_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/round_button"
-            android:text="Fast Food"
-            app:backgroundTint="@color/btn_fastfood" />
+            <RadioButton
+                android:id="@+id/filter_mexican"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/round_button"
+                android:text="@string/mexican"
+                app:backgroundTint="@color/btn_mexican" />
+
+            <RadioButton
+                android:id="@+id/filter_chinese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/round_button"
+                android:text="@string/chinese"
+                app:backgroundTint="@color/btn_chinese" />
+
+            <RadioButton
+                android:id="@+id/filter_fast_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/round_button"
+                android:text="@string/fast_food"
+                app:backgroundTint="@color/btn_fastfood" />
 
 
-    </RadioGroup>
+        </RadioGroup>
+    </HorizontalScrollView>
 
 
     <TextView
@@ -58,11 +78,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Restaurants"
+        android:text="@string/restaurants"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- ListView to display the restaurant items -->
+
     <ListView
         android:id="@+id/listview_restaurants"
         android:layout_width="match_parent"

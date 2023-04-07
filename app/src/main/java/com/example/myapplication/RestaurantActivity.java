@@ -47,12 +47,12 @@ public class RestaurantActivity extends AppCompatActivity {
                     binding.restaurantPhone.setVisibility(View.VISIBLE);
                     binding.restaurantRating.setVisibility(View.VISIBLE);
                     binding.webpageLink.setVisibility(View.VISIBLE);
-                    binding.showMoreButton.setText("show less");
+                    binding.showMoreButton.setText(" Show less ");
                 } else {
                     binding.restaurantPhone.setVisibility(View.GONE);
                     binding.restaurantRating.setVisibility(View.GONE);
                     binding.webpageLink.setVisibility(View.GONE);
-                    binding.showMoreButton.setText("show more");
+                    binding.showMoreButton.setText(" Show more ");
                 }
             }
         });
