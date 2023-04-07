@@ -32,16 +32,12 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
 
             ImageView imageView = convertView.findViewById(R.id.restaurant_image);
             TextView nameTextView = convertView.findViewById(R.id.restaurant_name);
-            //TextView restaurantType=convertView.findViewById(R.id.restaurant_type);
-            //TextView ratingTextView = convertView.findViewById(R.id.txt_restaurant_rating);
-           // RatingBar ratingBar = convertView.findViewById(R.id.restaurant_rating);
+            RatingBar ratingBar = convertView.findViewById(R.id.restaurant_rating);
 
 
             imageView.setImageResource(restaurant.getImageResourceId());
             nameTextView.setText(restaurant.getName());
-            //restaurantType.setText(restaurant.getType());
-            //ratingTextView.setText(restaurant.getRating()+"/5");
-            //ratingBar.setRating(restaurant.getRating());
+            ratingBar.setRating(restaurant.getRating());
 
 
             return convertView;
